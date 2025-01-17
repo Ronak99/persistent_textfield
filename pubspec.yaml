@@ -2,6 +2,7 @@ name: persistent_textfield
 description: "A Flutter package that extends the standard TextField widget to add persistence capabilities. This package automatically saves and restores text input values using unique identifiers, making it perfect for forms, notes, or any scenario where you need to persist user input across app sessions."
 version: 0.0.1
 homepage:
+repository: "https://github.com/Ronak99/persistent_textfield"
 
 environment:
   sdk: ^3.5.4
