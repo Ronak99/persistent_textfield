@@ -70,6 +70,7 @@ import 'package:persistent_text_field/persistent_text_field.dart';
 class MyForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final TextEditingController controller = TextEditingController();
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -77,6 +78,7 @@ class MyForm extends StatelessWidget {
           children: [
             PersistentTextField(
               persistenceId: 'user_notes',
+              controller: controller,
               decoration: InputDecoration(
                 labelText: 'Notes',
                 hintText: 'Enter your notes here',
@@ -88,6 +90,7 @@ class MyForm extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 PersistentTextField.resetPersistedValue('user_notes');
+                controller.clear();
               },
               child: Text('Reset Notes'),
             ),
